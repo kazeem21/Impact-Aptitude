@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Summary</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: whitesmoke;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container styling */
+        .summary-container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 0 3px #1900ffef;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Header styling */
+        .summary-container h1 {
+            font-size: 24px;
+            color: #1900ffef;
+            margin-bottom: 20px;
+        }
+
+        /* Candidate information styling */
+        .summary-container p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Special styling for the candidate's score */
+        .summary-container .score {
+            font-size: 22px;
+            font-weight: bold;
+            color: hsl(9, 91%, 56%); /* Unique color for the score */
+            margin-top: 20px;
+            border-top: 3px solid #702ddb4f;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="summary-container">
+        <h1><strong>Assessment Summary</strong></h1>
+        <p><strong>Name:</strong> <span id="candidate-name"></span></p>
+        <p><strong>Email:</strong> <span id="candidate-email"></span></p>
+        <p class="score"><strong>Your Score:</strong> <span id="candidate-score"></span></p>
+    </div>
+
+    <script>
+        // Load candidate information from localStorage
+        const storedName = localStorage.getItem('candidateName');
+        const storedEmail = localStorage.getItem('candidateEmail');
+        const storedScore = localStorage.getItem('finalScore');
+
+        // Display the information
+        document.getElementById('candidate-name').textContent = storedName;
+        document.getElementById('candidate-email').textContent = storedEmail;
+        document.getElementById('candidate-score').textContent = `${storedScore}%`;
+    </script>
+</body>
+</html>
