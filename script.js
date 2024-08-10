@@ -79,7 +79,7 @@ const questions = [
 let currentQuestion = 0; // Track the current question index
 let score = 0; // Track the user's score
 const maxScorePerQuestion = 20; // Each question is worth 20 marks
-const validPassword = 'id'; // Set a valid password for the quiz
+const validPassword = 'abc'; // Set a valid password for the quiz
 
 // Candidate information
 let candidateName = '';
@@ -102,6 +102,11 @@ function handleLogin(event) {
     if (password === validPassword) {
         candidateName = name;
         candidateEmail = email;
+
+        // Store candidate information in localStorage //new 
+        localStorage.setItem('candidateName', candidateName);
+        localStorage.setItem('candidateEmail', candidateEmail); // new
+
         document.getElementById('login-container').style.display = 'none';
         document.getElementById('quiz-container').style.display = 'block';
 
@@ -113,7 +118,6 @@ function handleLogin(event) {
         alert('Invalid password. Please try again.');
     }
 }
-
 // Function to load a question
 function loadQuestion() {
     const q = questions[currentQuestion]; // Get the current question object
@@ -155,11 +159,22 @@ function finishQuiz() {
     // Calculate the percentage score
     const totalPossibleScore = questions.length * maxScorePerQuestion;
     const percentageScore = (score / totalPossibleScore) * 100;
-    
+
+    // Store final score in localStorage // new add
+    localStorage.setItem('finalScore', percentageScore.toFixed(2)); // new add
+
+        // Redirect to the summary page // new add
+        window.location.href = "summary.html"; // new add
+
     // Display the percentage score as feedback
-    const feedbackText = `Finished Assessment. You scored ${percentageScore.toFixed(2)}%.`;
+    /*const feedbackText = `Finished Assessment. You scored ${percentageScore.toFixed(2)}%.`;
     document.getElementById('feedback-text').textContent = feedbackText;
-    document.getElementById('feedback-container').style.display = 'block';
+    document.getElementById('feedback-container').style.display = 'block';*/
+
+    // Example of how to retrieve the stored data: // new
+    console.log('Stored Name:', localStorage.getItem('candidateName'));
+    console.log('Stored Email:', localStorage.getItem('candidateEmail'));
+    console.log('Stored Final Score:', localStorage.getItem('finalScore')); //new
 
     // Send an email with the result (placeholder for email sending functionality)
     console.log(`Name: ${candidateName}`);
