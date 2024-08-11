@@ -26,9 +26,10 @@
             border-radius: 20px;
             box-shadow: 0 0 3px #1900ffef;
             padding: 40px;
-            max-width: 500px;
-            width: 100%;
+            max-width: 400px; /*add 500px*/
+            width: 90%; /*add 100%*/
             text-align: center;
+            box-sizing: border-box;
         }
 
         /* Header styling */
@@ -57,7 +58,8 @@
         /* Responsive Design */
         @media (max-width: 600px) {
             .summary-container {
-                padding: 20px; /* Adjust padding for smaller screens */
+                padding: 20px; /* Adjust padding for smaller screens */ 
+                width: 95%;
             }
 
             .summary-container h1 {
