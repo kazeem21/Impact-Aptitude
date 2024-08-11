@@ -21,6 +21,8 @@ body.login-page {
 /* Background color for the quiz page */
 body.quiz-page {
     background-color: rgb(236, 239, 243);
+    background-size: cover; /* add*/
+    background-position: center; /* add*/
 }
 
 /* Container for login form */
