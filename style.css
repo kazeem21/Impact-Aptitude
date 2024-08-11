@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* new 0**/
     display: flex; /* new */
     justify-content: center;
     align-items: center;
@@ -28,27 +28,34 @@ body.quiz-page {
 /* Container for login form */
 #login-container {
     margin: 20px auto;
-    width: 90%; /* add 80 */
+    width: 100%; /* add 80 */
     max-width: 400px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box; /* add*/
+    text-align: center; /* new up*/
 }
 
 /* Login form elements styling */
 #login-form label {
-    display: block;
-    margin: 10px 0 5px;
+    display: flex;
+    flex-direction: column;
+    /*margin: 10px 0 5px; */
 }
 
 #login-form input {
-    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /*width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; */
 }
 
 #login-form button {
@@ -70,13 +77,14 @@ body.quiz-page {
 /* Main quiz container styling */
 #quiz-container {
     margin: 20px auto;
-    width: 90%;
-    max-width: 400px; /*add 600*/
+    width: 100%;
+    max-width: 600px; 
     background-color: rgb(200, 200, 218);
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px; /*20 add */
     box-sizing: border-box; /*add*/
+    text-align: center;
 }
 
 /* Styling for the question image */
@@ -113,15 +121,15 @@ body.quiz-page {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) { /* add 600 */
     #login-container, #quiz-container {
-        width: 95%; /* Make the containers a bit wider on small screens */  /*add 95*/
-        padding: 15px; /*add 15*/
+        /*width: 95%; */ /* Make the containers a bit wider on small screens */  /*add 95*/
+        padding: 20px; /*add 15*/
     }
     
     #login-form input, #login-form button {
-        width: 100%; /* Full-width inputs and buttons on small screens */
-        padding: 12px; /*add*/
+        /*width: 100%; */ /* Full-width inputs and buttons on small screens */
+        padding: 8px; /*add*/
         font-size: 16px; /*add*/
     }
     
