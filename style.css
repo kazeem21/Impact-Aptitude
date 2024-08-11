@@ -1,21 +1,24 @@
 /* Styling the body for a clean look */
 body {
     font-family: Arial, sans-serif;
-    /*background-color: #728eb9;*/
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Background color for the login page */
 body.login-page {
-    /*background-color: #f0f0f0;*/
-    background-image: url(image1.jpg);
+    background-image: url(schoolimage2.jpg);
+    background-size: cover; /* Ensure the background covers the entire screen */
+    background-position: center;
 }
 
 /* Background color for the quiz page */
 body.quiz-page {
     background-color: rgb(236, 239, 243);
 }
-body {
+
+/* Container for login form */
 #login-container {
     margin: 20px auto;
     width: 80%;
@@ -56,7 +59,7 @@ body {
 /* Main quiz container styling */
 #quiz-container {
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     background-color: rgb(200, 200, 218);
     border-radius: 20px;
@@ -66,7 +69,7 @@ body {
 
 /* Styling for the question image */
 #question-container img {
-    max-width: 70%;
+    max-width: 100%; /* Ensure the image is responsive */
     height: auto;
     border-radius: 15px;
 }
@@ -92,4 +95,19 @@ body {
 /* Initially hide the feedback container */
 #feedback-container {
     display: none;
-} }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #login-container, #quiz-container {
+        width: 95%; /* Make the containers a bit wider on small screens */
+    }
+    
+    #login-form input, #login-form button {
+        width: 100%; /* Full-width inputs and buttons on small screens */
+    }
+    
+    h2 {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+    }
+}
