@@ -113,8 +113,8 @@ body.quiz-page {
 /* Responsive Design */
 @media (max-width: 600px) {
     #login-container, #quiz-container {
-        width: 100%; /* Make the containers a bit wider on small screens */  /*add 95*/
-        padding: 40px; /*add 15*/
+        width: 95%; /* Make the containers a bit wider on small screens */  /*add 95*/
+        padding: 15px; /*add 15*/
     }
     
     #login-form input, #login-form button {
