@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Summary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add viewport for responsiveness -->
+    <title>T'Oluwa Ni International Academy Aptitude Test Summary</title>
     <style>
         /* General page styling */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: whitesmoke;
+            background-image: url(schoolimage2.jpg);
+            background-size: cover; /* Ensure the background covers the entire screen */
+            background-position: center;
             color: #333;
             margin: 0;
             padding: 20px;
@@ -23,8 +25,8 @@
             background-color: #ffffff;
             border-radius: 20px;
             box-shadow: 0 0 3px #1900ffef;
-            padding: 30px;
-            max-width: 400px;
+            padding: 40px;
+            max-width: 500px;
             width: 100%;
             text-align: center;
         }
@@ -50,6 +52,25 @@
             margin-top: 20px;
             border-top: 3px solid #702ddb4f;
             padding-top: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .summary-container {
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+
+            .summary-container h1 {
+                font-size: 20px; /* Adjust the font size for smaller screens */
+            }
+
+            .summary-container p {
+                font-size: 16px; /* Adjust the font size for smaller screens */
+            }
+
+            .summary-container .score {
+                font-size: 20px; /* Adjust the font size for smaller screens */
+            }
         }
     </style>
 </head>
